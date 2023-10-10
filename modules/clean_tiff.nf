@@ -10,6 +10,6 @@ process clean_tiff {
   """
   script:
   """
-  clean_tiff.py $image --suffix $params.suffix
+  clean_tiff.py $image --suffix "$params.suffix"
   """
 }
