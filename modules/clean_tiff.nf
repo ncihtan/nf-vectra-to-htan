@@ -5,6 +5,7 @@ process clean_tiff {
   output:
     tuple val(meta), file('*.ome.tiff')
   publishDir "$params.outdir/", mode: 'copy', overwrite: true
+  stub:
   """
   touch image_cleaned.ome.tiff
   """
