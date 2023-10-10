@@ -1,8 +1,6 @@
 # nf-vectra-to-htan
 
-A NextFlow workflow to prepare Vectra mIF qptiff files for the HTAN DCC.
-
-This workflow takes qptiff files from Vectra miF images and outputs OME-TIFF 
+This workflow takes `qptiff` files from Vectra miF images and outputs OME-TIFF 
 images suitable for submission to the HTAN DCC with the Imaging Level 2 template.
 
 It performs the following steps
