@@ -40,3 +40,10 @@ By default this outputs into a new directory called `outputs` in your current wo
 
 - `outdir`: Directory for outputs (default: "`outputs`")
 - `suffix`: Suffix for output files (default: "`_htan`")
+
+### Docker images
+
+This workflow uses two existing Docker images that support other HTAN pipelines
+
+- [nf-artist](https://github.com/Sage-Bionetworks-Workflows/nf-artist/pkgs/container/nf-artist): This image is used for the conversion step
+- [nf-imagecleaner](https://github.com/ncihtan/nf-imagecleaner/pkgs/container/nf-imagecleaner/115612162?tag=latest): This image is used for the deidentification steps
