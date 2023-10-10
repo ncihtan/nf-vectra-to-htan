@@ -1,0 +1,6 @@
+.DS_Store
+.nextflow*
+work/
+outputs/
+data/
+test_samplesheet.csv
