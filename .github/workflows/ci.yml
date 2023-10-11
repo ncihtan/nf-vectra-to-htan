@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "main"
+      - "channel-names"
     paths:
       - "docker/**"
       - ".github/workflows/ci.yml"
