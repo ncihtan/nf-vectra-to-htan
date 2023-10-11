@@ -3,8 +3,8 @@ channels:
   - ome
   - conda-forge
 dependencies:
-  - bioformats2raw==0.70
-  - raw2ometiff==0.5.0
-  - bftools=7.0.0
-  - tifftools==1.3.12
-  - tifffile==2023.9.26
+  - bioformats2raw
+  - raw2ometiff
+  - bftools
+  - tifftools
+  - tifffile
