@@ -27,24 +27,14 @@ RUN /venv/bin/conda-unpack
 # The runtime-stage image; we can use Debian as the
 # base image since the Conda env also includes Python
 # for us.
-FROM debian:bullseye AS runtime
-
-# Copy /venv from the previous stage:
-COPY --from=build /venv /venv
+FROM python:3.11-slim as runtime
 
 SHELL ["/bin/bash", "-c"]
 
-RUN apt-get update && apt-get install --yes --no-install-recommends \
-    wget \
-    locales \
-    vim-tiny \
-    git \
-    cmake \
-    build-essential \
-    libopenslide-dev \
-    python3-dev \
-    python3-pip \
-    libblosc1
+RUN apt-get update
+
+# Copy /venv from the previous stage:
+COPY --from=build /venv /venv
 
 RUN source /venv/bin/activate
 
