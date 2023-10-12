@@ -31,7 +31,14 @@ FROM python:3.11-slim as runtime
 
 SHELL ["/bin/bash", "-c"]
 
-RUN apt-get update
+RUN apt-get update \
+    && apt-get upgrade -y \
+    # Install dependencies
+    && apt-get install procps -y \
+    # Clean up
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy /venv from the previous stage:
 COPY --from=build /venv /venv
