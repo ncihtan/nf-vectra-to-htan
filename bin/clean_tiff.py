@@ -33,9 +33,4 @@ unset_list = [
     "DateTime",
 ]
 
-tifftools.tiff_set(
-    args.input,
-    output=new_filename,
-    overwrite=False,
-    unset=unset_list
-)
+tifftools.tiff_set(args.input, output=new_filename, overwrite=False, unset=unset_list)

@@ -4,10 +4,12 @@ import ome_types
 import tifftools
 import sys
 
+
 # Function to read OME-XML using ome-types
 def read_ome_tiff(ome_tiff_path):
     metadata = ome_types.from_tiff(ome_tiff_path)
     return metadata
+
 
 # Function to add channel names to OME-XML
 def add_channel_names_to_ome_xml(ome_xml, channel_names):
@@ -22,6 +24,7 @@ def add_channel_names_to_ome_xml(ome_xml, channel_names):
     # Set channel names
     for i, channel in enumerate(pixels.channels):
         channel.name = channel_names[i]
+
 
 # Specify the path to the multi-channel OME-TIFF file and the channel names
 ome_tiff_path = sys.argv[1]
