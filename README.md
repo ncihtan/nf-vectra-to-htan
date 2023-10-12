@@ -24,12 +24,15 @@ nextflow run ncihtan/nf-vectra-to-htan --input <path-to-samplesheet>
 
 ### Inputs
 
-Create a CSV samplesheet containing one column called `image`. for example:
+Create a CSV samplesheet containing the following columns
+
+- `image` [path] Path or URI to a qptiff image for conversion
+- `channel_names` [str]: Double-quoted, comma separated list of channel names. Must match the number of channels present in `image`
 
 ```
-image
-path/to/myimage.qptiff
-s3://mybucket/myimage.qptiff
+image,channel_names
+path/to/myimage.qptiff,"DNA, CD45, CD4"
+s3://mybucket/myimage.qptiff, "DNA, CD8, Ki-67"
 ```
 
 ### Outputs
