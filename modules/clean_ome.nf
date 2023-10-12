@@ -1,5 +1,5 @@
 process clean_ome {
-  container = 'ghcr.io/ncihtan/nf-imagecleaner'
+  tag {"$meta.id"}
   input:
     tuple val(meta), file(image)
   output:

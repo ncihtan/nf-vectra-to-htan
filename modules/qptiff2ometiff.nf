@@ -1,7 +1,6 @@
 process QPTIFF2OMETIFF {
   tag {"$meta.id"}
   label "process_medium"
-  container 'ghcr.io/sage-bionetworks-workflows/nf-artist:latest'
   input:
       tuple val(meta), file(image) 
   output:
